@@ -11,7 +11,7 @@ class Exercise001 {
 
   def capitalizeWord(word: String): String = word.substring(0,1).toUpperCase + word.substring(1)
 
-  def generateInitials(firstName: String, lastName: String) = firstName.substring(0,1) + "." + lastName.substring(0,1)
+  def generateInitials(firstName: String, lastName: String): String = firstName.substring(0,1) + "." + lastName.substring(0,1)
 
   def addVat(initialPrice: Double, interestRate: Double) : Double = BigDecimal(((interestRate / 100) * initialPrice) + initialPrice).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
 
@@ -25,9 +25,10 @@ class Exercise001 {
    * @return
    */
   def countLinuxUsers(users: Seq[User]): Int = {
-      users.foreach(x => println(x))
-
-    0
+    if(users == null)  0
+    else
+//    users.filter(x => x.osType == "Linux").length
+      users.count(x => x.osType == "Linux")
   }
 
 }

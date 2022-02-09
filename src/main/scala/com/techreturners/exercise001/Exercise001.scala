@@ -25,7 +25,7 @@ class Exercise001 {
    * @return
    */
   def countLinuxUsers(users: Seq[User]): Int = {
-
+      users.foreach(x => println(x))
 
     0
   }

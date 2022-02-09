@@ -24,4 +24,10 @@ class Exercise004Test extends AnyFlatSpec{
     val exercise004 = new Exercise004(LocalDateTime.of(2021, Month.JANUARY, 24, 23, 59, 59, 0))
     assert(exercise004.getDateTimeWithGigaSecond == LocalDateTime.of(2052, Month.OCTOBER, 3, 1, 46, 39))
   }
+
+  it should "be returned with a date and time over a million years ago" in {
+    val exercise004 = new Exercise004(LocalDateTime.of(-1000000, Month.JANUARY, 1, 1, 1, 0, 0))
+    assert(exercise004.getDateTimeWithGigaSecond == LocalDateTime.of(-999969, Month.SEPTEMBER, 9, 2, 47, 40))
+  }
+
 }

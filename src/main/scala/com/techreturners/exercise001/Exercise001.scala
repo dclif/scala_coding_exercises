@@ -1,5 +1,7 @@
 package com.techreturners.exercise001
 
+import scala.collection.immutable.BitSet.empty.contains
+
 class Exercise001 {
 
   // Scala methods defined in various styles
@@ -11,8 +13,7 @@ class Exercise001 {
 
   def generateInitials(firstName: String, lastName: String) = firstName.substring(0,1) + "." + lastName.substring(0,1)
 
-  def addVat(initialPrice: Double, interestRate: Double) : Double = Math.round((((interestRate / 100) * initialPrice + initialPrice)*100) / 100)
-
+  def addVat(initialPrice: Double, interestRate: Double) : Double = BigDecimal(((interestRate / 100) * initialPrice) + initialPrice).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
 
   def reverse(sentence: String) : String = sentence.reverse
 
@@ -24,7 +25,8 @@ class Exercise001 {
    * @return
    */
   def countLinuxUsers(users: Seq[User]): Int = {
-    // Add your code here
+
+
     0
   }
 

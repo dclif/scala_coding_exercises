@@ -9,9 +9,9 @@ class Exercise003 {
       "Mint Chocolate Chip",
       "Chocolate",
       "Mango Sorbet")
-    return flavours.indexOf(iceCreamFlavour)
+    flavours.indexOf(iceCreamFlavour)
 
-    throw new UnsupportedOperationException("You can delete this line and add your code here.")
+
 
 
   }
@@ -24,8 +24,8 @@ class Exercise003 {
       "Chocolate",
       "Mango Sorbet"
     )
-    return flavours
-    throw new UnsupportedOperationException("You can delete this line and add your code here.")
+    flavours
+
 
   }
 

@@ -2,7 +2,10 @@ package com.techreturners.exercise004
 
 import java.time.{LocalDate, LocalDateTime}
 
+
 class Exercise004(var dateTime: LocalDateTime) {
+
+
 
   // Hint  take a look at Scala auxiliary constructors
   // https://docs.scala-lang.org/overviews/scala-book/classes-aux-constructors.html
